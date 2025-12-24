@@ -1,0 +1,733 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/megumin_smile.jpg">
+  <link rel="icon" href="/images/megumin_smile.jpg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="CRYPTOHACK WriteupIntroduction to CryptoHackXOR Starter Solution string &#x3D; labelkey &#x3D;13要求做XOR 123a &#x3D; &quot;label&quot;for i in range(0,5,1):    print(chr(ord(a[i]) ^ 13),end&#x3D;&#x27;&#x27;) XOR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CRYPTOHACK">
+<meta property="og:url" content="http://example.com/2025/12/24/CryptoHack/index.html">
+<meta property="og:site_name" content="blog">
+<meta property="og:description" content="CRYPTOHACK WriteupIntroduction to CryptoHackXOR Starter Solution string &#x3D; labelkey &#x3D;13要求做XOR 123a &#x3D; &quot;label&quot;for i in range(0,5,1):    print(chr(ord(a[i]) ^ 13),end&#x3D;&#x27;&#x27;) XOR">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hackmd.io/_uploads/r1mVqC5FJx.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/HJxvfyjYyx.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/H1_nWejKJx.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/BJauHljYJg.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/SyPhHWsK1e.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/ry7OHM-2ye.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/Skq4W8Whkl.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/Byc1M8-nyl.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/BJeEqH8h1l.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/B1x-nBUh1e.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/SJ3sjxFhyl.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/B15shghqJg.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/r12Fnx391l.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/BkdDAVh91l.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/Hyq_64h9kx.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/ryQAQ4feJg.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/SkYvxIMeyx.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/H1Lj7Lfe1g.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/BkNkBIfgJe.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/S1prD8fe1l.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/H16IDIGxkg.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/Hk0vydfe1g.png">
+<meta property="article:published_time" content="2025-12-24T07:22:16.000Z">
+<meta property="article:modified_time" content="2025-12-24T07:25:23.917Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Crypto">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hackmd.io/_uploads/r1mVqC5FJx.png">
+  
+  
+  
+  <title>CRYPTOHACK - blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Nineday`s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/images/megumin.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="CRYPTOHACK"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-12-24 15:22" pubdate>
+          2025年12月24日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          962 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          9 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">CRYPTOHACK</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="CRYPTOHACK-Writeup"><a href="#CRYPTOHACK-Writeup" class="headerlink" title="CRYPTOHACK Writeup"></a>CRYPTOHACK Writeup</h1><h1 id="Introduction-to-CryptoHack"><a href="#Introduction-to-CryptoHack" class="headerlink" title="Introduction to CryptoHack"></a>Introduction to CryptoHack</h1><h2 id="XOR-Starter"><a href="#XOR-Starter" class="headerlink" title="XOR Starter"></a>XOR Starter</h2><p><img src="https://hackmd.io/_uploads/r1mVqC5FJx.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p><strong>Solution</strong></p>
+<p>string &#x3D; label<br>key &#x3D;13<br>要求做XOR</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs pyton">a = &quot;label&quot;<br>for i in range(0,5,1):<br>    print(chr(ord(a[i]) ^ 13),end=&#x27;&#x27;)<br></code></pre></td></tr></table></figure>
+<h2 id="XOR-Properties"><a href="#XOR-Properties" class="headerlink" title="XOR Properties"></a>XOR Properties</h2><p><img src="https://hackmd.io/_uploads/HJxvfyjYyx.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p><strong>Solution</strong><br>這題看起來複雜，<del>事實上很複雜</del></p>
+<p><strong>KEY２:</strong><br>KEY2 ⊕ KEY1可以等於<br><code>(KEY2 ⊕ KEY1) ⊕ (KEY1 ⊕ KEY1)＝(KEY2 ⊕ KEY1) ⊕ KEY1</code><br>接著根據結合律<br><code>KEY2 ⊕ (KEY1 ⊕ KEY1)= KEY2</code></p>
+<p>所以：<code>KEY2= 37dcb292030faa90d07eec17e3b1c6d8daf94c35d4c9191a5e1e</code></p>
+<p><strong>KEY3:</strong><br>跟KEY2原理一樣<br>KEY2 ⊕ KEY3可以等於<br><code>(KEY3 ⊕ KEY2) ⊕ (KEY2 ⊕ KEY2)＝(KEY3 ⊕ KEY2) ⊕ KEY2</code><br>接著根據結合律<br><code>KEY3 ⊕ (KEY2 ⊕ KEY2)= KEY3</code></p>
+<p>所以：<code>KEY3= c1545756687e7573db23aa1c3452a098b71a7fbf0fddddde5fc1</code></p>
+<p>最後我們有了KEY1,KEY2,KEY3了<br>只要把KEY都帶進去就可以得到FLAG<br>記得在做XOR要先做位元換算</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs pyton">from pwn import *<br><br>KEY1 = bytes.fromhex(&quot;a6c8b6733c9b22de7bc0253266a3867df55acde8635e19c73313&quot;)<br>KEY2_KEY1 = bytes.fromhex(&quot;37dcb292030faa90d07eec17e3b1c6d8daf94c35d4c9191a5e1e&quot;)<br>KEY2_KEY3 = bytes.fromhex(&quot;c1545756687e7573db23aa1c3452a098b71a7fbf0fddddde5fc1&quot;)<br>FLAG_KEY123 = bytes.fromhex(&quot;04ee9855208a2cd59091d04767ae47963170d1660df7f56f5faf&quot;)<br><br>flag = xor(FLAG_KEY123, KEY2_KEY3, KEY1)<br><br>print(flag.decode())<br></code></pre></td></tr></table></figure>
+<h2 id="Favourite-byte"><a href="#Favourite-byte" class="headerlink" title="Favourite byte"></a><strong>Favourite byte</strong></h2><p><img src="https://hackmd.io/_uploads/H1_nWejKJx.png" srcset="/img/loading.gif" lazyload alt="image"><br>這題給了KEY是single byte(單字節)的提示<br>所以可以用暴力破解，把密文跑過1個byte</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs pyton">b = &quot;73626960647f6b206821204f21254f7d694f7624662065622127234f726927756d&quot;<br>c = bytes.fromhex(b)<br>for key in range(256):<br>    d = bytes([b ^ key for b in c])  <br>    print(d.decode()) <br></code></pre></td></tr></table></figure>
+<h2 id="You-either-know-XOR-you-don’t"><a href="#You-either-know-XOR-you-don’t" class="headerlink" title="You either know, XOR you don’t"></a>You either know, XOR you don’t</h2><p><img src="https://hackmd.io/_uploads/BJauHljYJg.png" srcset="/img/loading.gif" lazyload alt="image"><br>這題的key並沒有直接表示，但我們可以知道明文的開頭一定是<code>crypto{</code><br>所以我們只要把開頭帶進去就可以得知KEY</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs pyton">b = &quot;0e0b213f26041e480b26217f27342e175d0e070a3c5b103e2526217f27342e175d0e077e263451150104&quot;<br>c = bytes.fromhex(b)<br>key = &quot;crypto&#123;&quot;<br><br>d = bytearray(byte ^ ord(key[i % len(key)]) for i, byte in enumerate(c))<br><br>print(d.decode())<br></code></pre></td></tr></table></figure>
+<p>接著再帶進去，FALG就出來了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs pyton">b=&quot;0e0b213f26041e480b26217f27342e175d0e070a3c5b103e2526217f27342e175d0e077e263451150104&quot;<br>c = bytes.fromhex(b)<br>key = &quot;myXORkey&quot;<br><br># 解密：利用 XOR 解密每個字節<br>d = bytearray(byte ^ ord(key[i % len(key)]) for i, byte in enumerate(c))<br><br># 輸出解密後的明文<br>print(d.decode())<br></code></pre></td></tr></table></figure>
+<h1 id="Modular-Arithmetic"><a href="#Modular-Arithmetic" class="headerlink" title="Modular Arithmetic"></a>Modular Arithmetic</h1><h2 id="Greatest-Common-Divisor"><a href="#Greatest-Common-Divisor" class="headerlink" title="Greatest Common Divisor"></a>Greatest Common Divisor</h2><p><img src="https://hackmd.io/_uploads/SyPhHWsK1e.png" srcset="/img/loading.gif" lazyload alt="image"><br>這題要找最大公因數</p>
+<h3 id="輾轉相除法-歐幾里得算法，Euclidean-algorithm"><a href="#輾轉相除法-歐幾里得算法，Euclidean-algorithm" class="headerlink" title="輾轉相除法(歐幾里得算法，Euclidean algorithm)"></a>輾轉相除法(歐幾里得算法，Euclidean algorithm)</h3><ol>
+<li>取A,B兩個不為0的整數，並A&gt;&#x3D;B</li>
+<li>A÷B的商與餘(A&#x3D;Bq+r)</li>
+<li>如果r&#x3D;0，那B就是A最大公因數</li>
+<li>如果r≠0，則A&#x3D;B，B&#x3D;r，繼續計算下去</li>
+</ol>
+<h2 id="Extended-GCD"><a href="#Extended-GCD" class="headerlink" title="Extended GCD"></a>Extended GCD</h2><p><img src="https://hackmd.io/_uploads/ry7OHM-2ye.png" srcset="/img/loading.gif" lazyload alt="image"><br>這題要用擴充歐基里得演算法，求u,v</p>
+<blockquote>
+<p>pip python -m pip install egcd</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs pyton">from egcd import egcd<br>a = 26513<br>b = 32321<br>print(egcd(a, b))<br></code></pre></td></tr></table></figure>
+<p>output：(1, 10245, -8404)</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=Au0zVvkmvr0">https://www.youtube.com/watch?v=Au0zVvkmvr0</a> 參考影片</p>
+</blockquote>
+<h2 id="Modular-Arithmetic-1"><a href="#Modular-Arithmetic-1" class="headerlink" title="Modular Arithmetic 1"></a>Modular Arithmetic 1</h2><p><img src="https://hackmd.io/_uploads/Skq4W8Whkl.png" srcset="/img/loading.gif" lazyload alt="image"><br><strong>模的概念</strong></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-number">11%</span><span class="hljs-number">6</span>)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-number">8146798528947%</span><span class="hljs-number">17</span>)</span></span><br></code></pre></td></tr></table></figure>
+<h2 id="Modular-Arithmetic-2"><a href="#Modular-Arithmetic-2" class="headerlink" title="Modular Arithmetic 2"></a>Modular Arithmetic 2</h2><p><img src="https://hackmd.io/_uploads/Byc1M8-nyl.png" srcset="/img/loading.gif" lazyload alt="image"><br>這題要用費馬小定理(Fermat’s little theorem)<br>p &#x3D; 65537<br>根據費馬小定理：<strong>對於一個質數𝑝 和任何不被𝑝 整除的整數𝑎</strong><br>最小公因數必定會是1，gcd(a,p)&#x3D;1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs pyton">aᵖ⁻¹≡1(mod p)<br>65537是質數，所以<br>a⁶⁵⁵³⁶ ≡ 1 (mod 65537)<br></code></pre></td></tr></table></figure>
+<p>aᵖ≡a(mod p)</p>
+<blockquote>
+<p>費馬小定理：<a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10205906">https://ithelp.ithome.com.tw/articles/10205906</a></p>
+</blockquote>
+<h2 id="Modular-Inverting"><a href="#Modular-Inverting" class="headerlink" title="Modular Inverting"></a>Modular Inverting</h2><p><img src="https://hackmd.io/_uploads/BJeEqH8h1l.png" srcset="/img/loading.gif" lazyload alt="image"><br>這題給你：3*d ≡ 1(mod 13)<br>把d逆推回去就可以知道答案了。</p>
+<h2 id="Quadratic-Residues"><a href="#Quadratic-Residues" class="headerlink" title="Quadratic Residues"></a>Quadratic Residues</h2><p><img src="https://hackmd.io/_uploads/B1x-nBUh1e.png" srcset="/img/loading.gif" lazyload alt="image"><br><strong>二次剩餘定義：<br>有一個數 X，X²≡d(mod p)成立時，d是模p的二次剩餘(quadratic residues)<br>反之不成立，則稱d是模p的二次非剩餘(non-quadratic)</strong></p>
+<p>題目給了3個數字，兩個二次非剩餘，一個二次剩餘。<br>不知道是哪個，我們直接用python帶進去迴圈看。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs pyton">p = 29<br>ints = [14, 6, 11]<br>flag = 100000 # max<br>for n in ints:<br>    for a in range(1,29):<br>        if pow(a,2,p) == n:<br>            flag = min(flag,a)<br>print(flag)<br></code></pre></td></tr></table></figure>
+<h2 id="Legendre-Symbol"><a href="#Legendre-Symbol" class="headerlink" title="Legendre Symbol"></a>Legendre Symbol</h2><p><img src="https://hackmd.io/_uploads/SJ3sjxFhyl.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs pyton">p = 101524035174539890485408575671085261788758965189060164484385690801466167356667036677932998889725476582421738788500738738503134356158197247473850273565349249573867251280253564698939768700489401960767007716413932851838937641880157263936985954881657889497583485535527613578457628399173971810541670838543309159139<br><br>ints = [25081841204695904475894082974192007718642931811040324543182130088804239047149283334700530600468528298920930150221871666297194395061462592781551275161695411167049544771049769000895119729307495913024360169904315078028798025169985966732789207320203861858234048872508633514498384390497048416012928086480326832803, 45471765180330439060504647480621449634904192839383897212809808339619841633826534856109999027962620381874878086991125854247108359699799913776917227058286090426484548349388138935504299609200377899052716663351188664096302672712078508601311725863678223874157861163196340391008634419348573975841578359355931590555, 17364140182001694956465593533200623738590196990236340894554145562517924989208719245429557645254953527658049246737589538280332010533027062477684237933221198639948938784244510469138826808187365678322547992099715229218615475923754896960363138890331502811292427146595752813297603265829581292183917027983351121325, 14388109104985808487337749876058284426747816961971581447380608277949200244660381570568531129775053684256071819837294436069133592772543582735985855506250660938574234958754211349215293281645205354069970790155237033436065434572020652955666855773232074749487007626050323967496732359278657193580493324467258802863, 4379499308310772821004090447650785095356643590411706358119239166662089428685562719233435615196994728767593223519226235062647670077854687031681041462632566890129595506430188602238753450337691441293042716909901692570971955078924699306873191983953501093343423248482960643055943413031768521782634679536276233318, 85256449776780591202928235662805033201684571648990042997557084658000067050672130152734911919581661523957075992761662315262685030115255938352540032297113615687815976039390537716707854569980516690246592112936796917504034711418465442893323439490171095447109457355598873230115172636184525449905022174536414781771, 50576597458517451578431293746926099486388286246142012476814190030935689430726042810458344828563913001012415702876199708216875020997112089693759638454900092580746638631062117961876611545851157613835724635005253792316142379239047654392970415343694657580353333217547079551304961116837545648785312490665576832987, 96868738830341112368094632337476840272563704408573054404213766500407517251810212494515862176356916912627172280446141202661640191237336568731069327906100896178776245311689857997012187599140875912026589672629935267844696976980890380730867520071059572350667913710344648377601017758188404474812654737363275994871, 4881261656846638800623549662943393234361061827128610120046315649707078244180313661063004390750821317096754282796876479695558644108492317407662131441224257537276274962372021273583478509416358764706098471849536036184924640593888902859441388472856822541452041181244337124767666161645827145408781917658423571721, 18237936726367556664171427575475596460727369368246286138804284742124256700367133250078608537129877968287885457417957868580553371999414227484737603688992620953200143688061024092623556471053006464123205133894607923801371986027458274343737860395496260538663183193877539815179246700525865152165600985105257601565]<br><br>a = 0<br>for i in ints:<br>    if pow(i,(p-1)//2,p) == 1:<br>        a = i<br>        break<br>print(pow(a,(p+1)//4,p))<br></code></pre></td></tr></table></figure>
+<h1 id="Symmetric-Cryptography"><a href="#Symmetric-Cryptography" class="headerlink" title="Symmetric Cryptography"></a>Symmetric Cryptography</h1><h2 id="Keyed-Permutations"><a href="#Keyed-Permutations" class="headerlink" title="Keyed Permutations"></a>Keyed Permutations</h2><p><img src="https://hackmd.io/_uploads/B15shghqJg.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<h2 id="Resisting-Bruteforce"><a href="#Resisting-Bruteforce" class="headerlink" title="Resisting Bruteforce"></a>Resisting Bruteforce</h2><p><img src="https://hackmd.io/_uploads/r12Fnx391l.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<h2 id="Structure-of-AES"><a href="#Structure-of-AES" class="headerlink" title="Structure of AES"></a>Structure of AES</h2><p>前面兩題都是在講簡單的概念，這題要你知道AES的原理以及怎麼去做加密的，<br>總共有四個步驟：<br>(PS：題目有附影片看下面講得會借用圖片來解釋：<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=gP4PqVGudtg">https://www.youtube.com/watch?v=gP4PqVGudtg</a>)</p>
+<ol>
+<li>SubBytes（字節代換）</li>
+<li>ShiftRows（行位移）</li>
+<li>MixColumns（列混合）</li>
+<li>AddRoundKey（輪密鑰加）</li>
+</ol>
+<p><img src="https://hackmd.io/_uploads/BkdDAVh91l.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p>左邊輸入，右邊是鑰匙<br><img src="https://hackmd.io/_uploads/Hyq_64h9kx.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<h1 id="RSA"><a href="#RSA" class="headerlink" title="RSA"></a>RSA</h1><h2 id="1-Modular-Exponentiation"><a href="#1-Modular-Exponentiation" class="headerlink" title="1. Modular Exponentiation"></a>1. Modular Exponentiation</h2><p><img src="https://hackmd.io/_uploads/ryQAQ4feJg.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p><strong>Solution</strong></p>
+<p>題目要求使用mod，將101¹⁷ mod 22663</p>
+<blockquote>
+<p>pow(base, exponent, modulus)</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs pyton">b = 101<br>e = 17<br>m = 22663<br>print(pow(b,e,m))<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-Public-Keys"><a href="#2-Public-Keys" class="headerlink" title="2. Public Keys"></a>2. Public Keys</h2><p><img src="https://hackmd.io/_uploads/SkYvxIMeyx.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p><strong>Solution</strong></p>
+<p>題目要求我們將12加密，並給了我們Keyp&#x3D;17、q&#x3D;23、e&#x3D;65537</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs pyton">p=17<br>q=23<br>e=65537<br>n = p*q<br>m = 12<br>print(pow(m,e,n))<br></code></pre></td></tr></table></figure>
+
+<h2 id="3-Euler’s-Totient"><a href="#3-Euler’s-Totient" class="headerlink" title="3. Euler’s Totient"></a>3. Euler’s Totient</h2><p><img src="https://hackmd.io/_uploads/H1Lj7Lfe1g.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p><strong>Solution</strong></p>
+<p>給了 P和Q兩個質數，要求帶入歐拉函式算出N</p>
+<p>p &#x3D; 857504083339712752489993810777<br>q &#x3D; 1029224947942998075080348647219</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs pyton">p = 857504083339712752489993810777<br>q = 1029224947942998075080348647219<br><br>print((p-1)*(q-1))<br></code></pre></td></tr></table></figure>
+<p>歐拉函式：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0">https://zh.wikipedia.org/zh-tw/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0</a></p>
+<h2 id="4-Private-Keys"><a href="#4-Private-Keys" class="headerlink" title="4. Private Keys"></a>4. Private Keys</h2><p><img src="https://hackmd.io/_uploads/BkNkBIfgJe.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p><strong>Solution</strong></p>
+<p>求私鑰 d，<br><img src="https://hackmd.io/_uploads/S1prD8fe1l.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p><img src="https://hackmd.io/_uploads/H16IDIGxkg.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p>p &#x3D; 857504083339712752489993810777<br>q &#x3D; 1029224947942998075080348647219<br>e &#x3D; 65537</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs pyton">p = 857504083339712752489993810777       <br>q = 1029224947942998075080348647219<br>e = 65537<br>n = (p-1)*(q-1)<br>print(pow(e,-1,n))<br></code></pre></td></tr></table></figure>
+<p>數論倒數：<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=C7Kuo0e9s6Y">https://www.youtube.com/watch?v=C7Kuo0e9s6Y</a></p>
+<h2 id="5-RSA-Decryption"><a href="#5-RSA-Decryption" class="headerlink" title="5. RSA Decryption"></a>5. RSA Decryption</h2><p><img src="https://hackmd.io/_uploads/Hk0vydfe1g.png" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p><strong>Solution</strong></p>
+<p>與上一題結合，解密密文</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs pyton">key = 121832886702415731577073962957377780195510499965398469843281<br>n = 882564595536224140639625987659416029426239230804614613279163<br>e = 65537<br>c = 77578995801157823671636298847186723593814843845525223303932<br><br>p = 857504083339712752489993810777<br>q = 1029224947942998075080348647219<br><br>pq = (p-1) * (q-1)<br>d = pow(e,-1,pq)<br><br>print(pow(c,d,n))<br></code></pre></td></tr></table></figure>
+<hr>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Crypto/" class="print-no-link">#Crypto</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>CRYPTOHACK</div>
+      <div>http://example.com/2025/12/24/CryptoHack/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年12月24日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/12/24/PicoCTF/" title="picoCTF">
+                        <span class="hidden-mobile">picoCTF</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
